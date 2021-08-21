@@ -5,16 +5,13 @@ from os import PathLike
 def longestPalindrome(s: str) -> str:
     if(s == ""):
         return s
-    palinArray = []
+    n = len(s)
     palinStart = 0
     palinEnd = 0
-    for k in range(len(s)):
-        palinArray.append([])
-        for i in range(len(s)-k):
-            palinArray[k].append(False)
+    palinArray = [[False]*n for _ in range(n)]
 
-    for k in range(len(s)):
-        for i in range(len(s)-k):
+    for k in range(n):
+        for i in range(n-k):
             j = i + k
             if(k==0):
                 palinArray[i][j] = True
