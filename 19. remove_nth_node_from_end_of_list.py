@@ -13,9 +13,14 @@ class Solution:
             nodeList.append(node)
             node = node.next
             nodeLen = nodeLen + 1
-        if(nodeLen-n-1 < 0):
-            return nodeList[nodeLen-n]
-        nodeList[nodeLen-n-1].next = nodeList[nodeLen-n+1]
+        if(nodeLen == 1):
+            return None
+        if(n == 1):
+            nodeList[nodeLen-n-1].next = None
+        elif(n == nodeLen):
+            return nodeList[nodeLen-n+1]
+        else:
+            nodeList[nodeLen-n-1].next = nodeList[nodeLen-n+1]
         
         return head
 
