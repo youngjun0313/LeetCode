@@ -4,6 +4,7 @@ public class Main {
     }
 
     public static int solution() {
+        //asd
         return 1;
     }
 }
