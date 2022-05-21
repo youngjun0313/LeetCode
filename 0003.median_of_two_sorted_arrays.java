@@ -28,7 +28,6 @@ class Solution {
                 }
             }
         }
-
         if(l==1)
             return nums[0];
         else {
